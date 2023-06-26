@@ -1,6 +1,20 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app"
+import dynamic from "next/dynamic"
+import { FC } from "react"
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import "../css/fonts.css"
+import "../css/main.css"
+
+const Page = dynamic(() => import("@/components/page/Page"))
+
+const App: FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <Page>
+      <Component {...pageProps} />
+    </Page>
+  )
 }
+
+export default dynamic(() => Promise.resolve(App), {
+  ssr: false,
+})
