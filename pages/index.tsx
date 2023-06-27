@@ -2,8 +2,6 @@ import { NextPage } from "next"
 import dynamic from "next/dynamic"
 import Head from "next/head"
 
-import ClientLetter from "@/components/ClientLetter"
-
 const HomeHero = dynamic(() => import("@/components/hero/HomeHero"))
 const PartnerCTA = dynamic(() => import("@/components/PartnerCTA"))
 const BestPractices = dynamic(() => import("@/components/cta/BestPractices"))
@@ -32,7 +30,6 @@ const Home: NextPage = () => {
       <HomeHero />
       <PartnerCTA heading="Trusted by the best." page="home" />
       <BestPractices />
-      <ClientLetter />
     </>
   )
 }

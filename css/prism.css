@@ -77,11 +77,11 @@
   @apply bg-rose-500/[0.15] border-rose-400 before:content-['-'] before:text-rose-400;
 }
 
-pre[class^='language-diff-'] {
+pre[class^="language-diff-"] {
   @apply flex px-9;
 }
 
-pre[class^='language-diff-'] > code {
+pre[class^="language-diff-"] > code {
   @apply flex-none min-w-full;
 }
 

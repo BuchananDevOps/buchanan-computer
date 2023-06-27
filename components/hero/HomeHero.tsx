@@ -1,5 +1,6 @@
-import Link from "next/link"
 import { FC } from "react"
+
+import IntroServices from "../page/IntroServices"
 
 const HomeHero: FC = () => {
   return (
@@ -28,24 +29,7 @@ const HomeHero: FC = () => {
           . We code with an emphasis on performance and structured data.
         </p>
         <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
-          <Link
-            className="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
-            href="/contact"
-          >
-            Schedule Consultation
-          </Link>
-          <Link
-            className="bg-slate-50 text-black ring-1 ring-slate-300 hover:bg-slate-200 focus:outline-none focus:ring-1 focus:ring-slate-400  font-semibold h-12 px-6 rounded-lg hidden sm:flex items-center justify-center sm:w-auto"
-            href="/showcase"
-          >
-            <span>
-              Browse Our Work{" "}
-              <span className="hidden sm:inline">Portfolio</span>{" "}
-              <span aria-hidden="true" className="text-black/25 sm:inline">
-                →
-              </span>
-            </span>
-          </Link>
+          <IntroServices />
         </div>
       </div>
     </div>
