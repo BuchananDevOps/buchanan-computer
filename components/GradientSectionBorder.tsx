@@ -2,7 +2,7 @@ import React, { FC } from "react"
 
 import clsx from "clsx"
 
-import { FadeIn } from "./FadeIn"
+import { FadeIn } from "./motion/FadeIn"
 
 type Props = {
   children: React.ReactNode

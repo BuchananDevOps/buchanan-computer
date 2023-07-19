@@ -2,7 +2,7 @@ import React, { FC } from "react"
 
 import clsx from "clsx"
 
-import { FadeIn } from "../FadeIn"
+import { FadeIn } from "../motion/FadeIn"
 
 type Props = {
   id: string
@@ -15,7 +15,7 @@ const Section: FC<Props> = ({ id, className, children, isBordered = true }) => {
   return (
     <FadeIn>
       <section
-        className={clsx("", {
+        className={clsx("relative", {
           "pointer-events-non bg-gradient-to-b from-white to-slate-50/50 inset-0 shadow-[inset_0_-1px_1px_rgba(0,0,0,0.06)]":
             isBordered === true,
         })}

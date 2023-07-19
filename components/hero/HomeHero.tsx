@@ -1,13 +1,12 @@
 import { FC } from "react"
 
-import IntroServices from "../page/IntroServices"
-
 const HomeHero: FC = () => {
   return (
     <div className=" overflow-hidden px-4 sm:px-6 md:px-8  bg-slate-50">
       <div className="relative max-w-5xl mx-auto py-20 sm:pt-24 lg:pt-32">
         <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
-          Grow your business rapidly with the best seo and web design.
+          Grow your business rapidly with a high performance website with
+          built-in SEO.
         </h1>
         <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
           We&apos;re the go-to web design company, specializing in{" "}
@@ -28,9 +27,6 @@ const HomeHero: FC = () => {
           </code>{" "}
           . We code with an emphasis on performance and structured data.
         </p>
-        <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
-          <IntroServices />
-        </div>
       </div>
     </div>
   )

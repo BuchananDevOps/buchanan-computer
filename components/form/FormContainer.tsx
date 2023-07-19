@@ -1,14 +1,27 @@
 import React, { FC } from "react"
 
+import clsx from "clsx"
+
 type Props = {
   heading?: string
   description?: string
+  className?: string
   children?: React.ReactNode
 }
 
-const FormContainer: FC<Props> = ({ heading, description, children }) => {
+const FormContainer: FC<Props> = ({
+  heading,
+  description,
+  children,
+  className,
+}) => {
   return (
-    <div className="relative z-10 -mx-4 bg-[radial-gradient(164.75%_100%_at_50%_0%,#334155_0%,#0F172A_48.73%)] px-5 py-10 shadow-lg sm:mx-0 sm:rounded-3xl sm:px-10">
+    <div
+      className={clsx(
+        "relative z-10 -mx-4 bg-[radial-gradient(164.75%_100%_at_50%_0%,#334155_0%,#0F172A_48.73%)] px-5 py-10 shadow-lg sm:mx-0 sm:rounded-3xl sm:px-10",
+        className
+      )}
+    >
       <div className="flex">
         <svg
           className="h-14 w-14 flex-none"

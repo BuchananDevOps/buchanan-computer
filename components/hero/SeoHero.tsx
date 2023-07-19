@@ -74,7 +74,7 @@ const SeoHero: FC = () => {
               href="/seo#seo-audit"
             >
               <span>
-                Documentation{" "}
+                Request SEO Audit{" "}
                 <span aria-hidden="true" className="text-black/25 sm:inline">
                   →
                 </span>

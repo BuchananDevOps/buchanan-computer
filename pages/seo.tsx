@@ -9,12 +9,11 @@ const OffPage = dynamic(() => import("@/components/page/OffPage"))
 const SchemaEvent = dynamic(() => import("@/components/SchemaEvent"))
 const SchemaLocal = dynamic(() => import("@/components/SchemaLocal"))
 const SeoHero = dynamic(() => import("@/components/hero/SeoHero"))
-const PartnerCTA = dynamic(() => import("@/components/PartnerCTA"))
+const PartnerCTA = dynamic(() => import("@/components/cta/PartnerCTA"))
 const SectionFlow = dynamic(() => import("@/components/page/SectionFlow"))
-const Section = dynamic(() => import("@/components/page/Section"))
-const Heading = dynamic(() => import("@/components/page/Heading"))
 const Faq = dynamic(() => import("@/components/page/Faq"))
 const SeoForm = dynamic(() => import("@/components/form/SeoForm"))
+const SectionCenter = dynamic(() => import("@/components/page/SectionCenter"))
 
 const SeoPage: NextPage = () => {
   return (
@@ -114,30 +113,26 @@ const SeoPage: NextPage = () => {
         </div>
       </SectionFlow>
       <OffPage />
-      <Section id="seo-audit">
-        <div className="mx-auto items-center grid max-w-2xl grid-cols-1 gap-x-14 gap-y-4  md:gap-y-10 lg:max-w-5xl lg:px-8 xl:max-w-none xl:grid-cols-12 xl:px-0">
-          <div className="lg:col-span-5">
-            <Heading
-              description={
-                "Discover inisghts, trends, ranking, popular keywords, opportunities, and your site's overall SEO performance."
-              }
-              heading="Request an SEO audit."
-              subHeading="How's your site performing?"
-            />
+      <SectionCenter
+        description={
+          "Discover inisghts, trends, ranking, popular keywords, opportunities, and your site's overall SEO performance."
+        }
+        heading="Request an SEO audit."
+        id={"seo-audit"}
+        subHeading="How's your site performing?"
+      >
+        <div className="-mb-4 mt-4 relative lg:col-span-8 xl:col-span-7 xl:col-start-6 ring-1 ring-slate-900/5 sm:mx-0 sm:rounded-2xl -mx-5">
+          <div className="flex absolute -bottom-px sm:ml-16 h-[2px] w-full sm:w-3/4">
+            <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgb(88,165,255,0)_0%,#a67af4,#ff3358_67.19%,#ff4fd81f_100%)]" />
+            <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgb(88,165,255,0)_0%,#a67af4,#ff3358_67.19%,#ff4fd81f_100%)]" />
+            <div className="-ml-[100%] w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgb(88,165,255,0)_0%,#a67af4,#ff3358_67.19%,#ff4fd81f_100%)]" />
+            <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgb(88,165,255,0)_0%,#a67af4,#ff3358_67.19%,#ff4fd81f_100%)]" />
           </div>
-          <div className="-mb-4 relative lg:col-span-8 xl:col-span-7 xl:col-start-6 ring-1 ring-slate-900/5 sm:mx-0 sm:rounded-2xl -mx-5">
-            <div className="flex absolute -bottom-px left-1/2 -ml-48 h-[2px] w-96">
-              <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]" />
-              <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]" />
-              <div className="-ml-[100%] w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]" />
-              <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]" />
-            </div>
-            <div className="relative flex flex-col bg-slate-50 px-5 py-8 sm:rounded-2xl">
-              <SeoForm />
-            </div>
+          <div className="relative flex flex-col bg-slate-900/50 px-5 pt-4 pb-5 sm:rounded-2xl">
+            <SeoForm />
           </div>
         </div>
-      </Section>
+      </SectionCenter>
       <Faq
         heading={"Frequently asked SEO questions"}
         id={"seo-faq"}

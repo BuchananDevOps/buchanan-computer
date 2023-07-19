@@ -1,7 +1,7 @@
 import { FC } from "react"
 
-import { FadeIn } from "./FadeIn"
 import { HeroText } from "./Headings"
+import { FadeIn } from "./motion/FadeIn"
 
 const ClientLetter: FC = () => {
   return (

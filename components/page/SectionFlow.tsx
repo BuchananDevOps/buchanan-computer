@@ -3,7 +3,7 @@ import React, { FC } from "react"
 
 import clsx from "clsx"
 
-import { FadeIn } from "../FadeIn"
+import { FadeIn } from "../motion/FadeIn"
 import Heading from "./Heading"
 
 type NextImageSrc = Parameters<typeof Image>[0]["src"]

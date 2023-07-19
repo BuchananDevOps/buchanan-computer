@@ -6,8 +6,8 @@ import GoogleStats from "@/public/content/seo/ops-1.webp"
 import GoogleOptions from "@/public/content/seo/ops-2.webp"
 import GoogleReviews from "@/public/content/seo/ops-4.webp"
 
-import { FadeIn } from "../FadeIn"
 import GridItem from "../GridItem"
+import { FadeIn } from "../motion/FadeIn"
 
 const OffPage: FC = () => {
   return (

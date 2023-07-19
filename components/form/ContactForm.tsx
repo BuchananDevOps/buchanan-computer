@@ -48,22 +48,22 @@ const ContactForm: FC = () => {
   })
   return (
     <FormContainer
-      description="Someone will reach out shortly"
-      heading="Get in Touch"
+      description="All fields are required. Someone will reach out shortly."
+      heading="Get things started today!"
     >
-      <form action="/api/contact" className="form">
+      <form action="/api/contact" className="form px-4 sm:px-0">
         <fieldset className="space-y-2">
           <div className="grid grid-cols-6 gap-2">
             <div className="col-span-6 sm:col-span-3">
               <label className="flex flex-1 flex-col gap-0.5">
-                <span className="text-white">
-                  First Name
+                <span className="text-white text-sm font-medium">
+                  First name
                   <span className="font-normal text-red-600 pl-1">*</span>
                 </span>
                 <input
                   required
                   aria-label="firstName"
-                  className="text-neutral-200 bg-slate-700"
+                  className="mt-1"
                   inputMode="text"
                   name="firstName"
                   type="text"
@@ -76,14 +76,14 @@ const ContactForm: FC = () => {
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label className="flex flex-1 flex-col gap-0.5">
-                <span className="text-white">
-                  Last Name
+                <span className="text-white text-sm font-medium">
+                  Last name
                   <span className="font-normal text-red-600 pl-1">*</span>
                 </span>
                 <input
                   required
                   aria-label="lastName"
-                  className="text-neutral-200 bg-slate-700"
+                  className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
                   inputMode="text"
                   name="lastName"
                   type="text"
@@ -96,14 +96,14 @@ const ContactForm: FC = () => {
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label className="flex flex-1 flex-col gap-0.5">
-                <span className="text-white">
-                  Work Email
+                <span className="text-white text-sm font-medium">
+                  Work email
                   <span className="font-normal text-red-600 pl-1">*</span>
                 </span>
                 <input
                   required
                   aria-label="email"
-                  className="text-neutral-200 bg-slate-700"
+                  className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
                   inputMode="text"
                   name="email"
                   type="email"
@@ -116,14 +116,14 @@ const ContactForm: FC = () => {
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label className="flex flex-1 flex-col gap-0.5">
-                <span className="text-white">
-                  Company Name
+                <span className="text-white text-sm font-medium">
+                  Company name
                   <span className="font-normal text-red-600 pl-1">*</span>
                 </span>
                 <input
                   required
                   aria-label="company"
-                  className="text-neutral-200 bg-slate-700"
+                  className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
                   inputMode="text"
                   name="company"
                   type="text"
@@ -136,13 +136,14 @@ const ContactForm: FC = () => {
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label className="flex flex-1 flex-col gap-0.5">
-                <span className="text-white">
+                <span className="text-white text-sm font-medium">
                   Phone Number
-                  <span className="font-normal"> (optional)</span>
+                  <span className="font-normal text-red-600 pl-1">*</span>
                 </span>
                 <input
+                  required
                   aria-label="phone"
-                  className="text-neutral-200 bg-slate-700"
+                  className="text-neutral-200 focus:text-neutral-200  mt-1 block w-full   text-sm shadow-sm placeholder-slate-400"
                   inputMode="text"
                   name="phone"
                   type="text"
@@ -155,12 +156,13 @@ const ContactForm: FC = () => {
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label className="flex flex-1 flex-col gap-0.5">
-                <span className="text-white">
+                <span className="text-white text-sm font-medium">
                   Topic
                   <span className="font-normal text-red-600 pl-1">*</span>
                 </span>
                 <select
-                  className="text-neutral-200 bg-slate-700"
+                  required
+                  className="mt-1"
                   inputMode="text"
                   name="topic"
                   value={topic}
@@ -178,13 +180,13 @@ const ContactForm: FC = () => {
             </div>
             <div className="col-span-6">
               <label className="flex flex-1 flex-col gap-0.5">
-                <span className="text-white">
-                  Project Details/Questions
+                <span className="text-white text-sm font-medium">
+                  Questions/Comments
                   <span className="font-normal text-red-600 pl-1">*</span>
                 </span>
                 <textarea
                   required
-                  className="text-neutral-200 bg-slate-700"
+                  className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
                   id="text-area"
                   maxLength={1500}
                   name="message"
@@ -201,11 +203,11 @@ const ContactForm: FC = () => {
             </div>
           </div>
           <button
-            className="inline-flex justify-center rounded-lg text-sm font-semibold py-2 px-3 bg-slate-600 text-white hover:bg-slate-500 mt-6 w-full"
+            className="bg-slate-900/50 mt-2 hover:bg-slate-700/50 focus:outline-none ring-1  hover:ring-green-400 text-white font-semibold h-10 w-full px-6 rounded-lg flex items-center justify-center"
             type="submit"
             onChange={() => refetch()}
           >
-            Get in touch
+            Send
           </button>
         </fieldset>
       </form>

@@ -2,7 +2,7 @@ import { FC } from "react"
 
 import clsx from "clsx"
 
-import Logo from "@/components/Logo"
+import Logo from "@/components/page/Logo"
 
 type Props = {
   className?: string

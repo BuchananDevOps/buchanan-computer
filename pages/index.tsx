@@ -2,8 +2,14 @@ import { NextPage } from "next"
 import dynamic from "next/dynamic"
 import Head from "next/head"
 
+import WebDesignDark from "@/components/icons/WebDesignDark"
+import SectionVertical from "@/components/page/SectionVertical"
+import IntroSeo from "@/components/section/IntroSeo"
+import IntroWebDesign from "@/components/section/IntroWebDesign"
+import IntroHero from "@/components/hero/IntroHero"
+
 const HomeHero = dynamic(() => import("@/components/hero/HomeHero"))
-const PartnerCTA = dynamic(() => import("@/components/PartnerCTA"))
+const PartnerCTA = dynamic(() => import("@/components/cta/PartnerCTA"))
 const BestPractices = dynamic(() => import("@/components/cta/BestPractices"))
 
 const Home: NextPage = () => {
@@ -27,7 +33,7 @@ const Home: NextPage = () => {
         />
         <title>Grow your business rapidly with a modern website.</title>
       </Head>
-      <HomeHero />
+      <IntroHero />
       <PartnerCTA heading="Trusted by the best." page="home" />
       <BestPractices />
     </>

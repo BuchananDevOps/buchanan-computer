@@ -18,11 +18,11 @@ type Props = {
 const Faq: FC<Props> = ({ id, heading, subHeading, type, className }) => {
   return (
     <Section className={className} id={id}>
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-14 gap-y-16 lg:max-w-5xl lg:px-8 xl:max-w-none xl:grid-cols-12 xl:px-0">
-        <div className="lg:col-span-5">
+      <div className="mx-auto max-w-container pt-4 sm:px-6 lg:flex lg:flex-col lg:items-center lg:gap-x-14 lg:px-8">
+        <div className="relative z-20 mx-auto max-w-[40rem] pb-10 pt-16 lg:mx-0 lg:w-[50rem] lg:max-w-none lg:flex-none lg:pb-10 lg:pr-4 lg:pt-20">
           <Heading heading={heading} subHeading={subHeading} />
         </div>
-        <div className="-mb-4 lg:col-span-8 xl:col-span-7 xl:col-start-6">
+        <div className="relative z-20 mx-auto max-w-[40rem] pb-16 lg:mx-0 lg:w-[50rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4">
           {type === "seo"
             ? seoFaq.mainEntity.map(item => (
                 <FaqItem

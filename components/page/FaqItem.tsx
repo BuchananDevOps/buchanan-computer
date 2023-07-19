@@ -12,10 +12,10 @@ const FaqItem: FC<Props> = ({ name, text }) => {
       id={`${name}`.replace(/\s+/g, "-").toLowerCase()}
     >
       <details className="group py-3 marker:content-['']">
-        <summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-indigo-600 [&amp;::-webkit-details-marker]:hidden">
+        <summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 group-open:text-sky-600 [&amp;::-webkit-details-marker]:hidden">
           {name}
           <svg
-            className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-indigo-500"
+            className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-sky-500"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -27,7 +27,7 @@ const FaqItem: FC<Props> = ({ name, text }) => {
           </svg>
         </summary>
         <div className="pb-6 pt-6">
-          <div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500">
+          <div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-sky-600 hover:prose-a:text-sky-500">
             <p>{text}</p>
           </div>
         </div>

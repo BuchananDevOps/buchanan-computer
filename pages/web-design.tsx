@@ -2,17 +2,14 @@ import { NextPage } from "next"
 import dynamic from "next/dynamic"
 
 import { WEB_APP_FEATURES, WEB_FEATURES, WEB_UI_FEATURES } from "@/lib/features"
-import { WEB_DESIGN_BENEFITS, WEB_DESIGN_PROCESS } from "@/lib/webServices"
 
-const Heading = dynamic(() => import("@/components/page/Heading"))
-const Section = dynamic(() => import("@/components/page/Section"))
 const WebHero = dynamic(() => import("@/components/hero/WebHero"))
-const PartnerCTA = dynamic(() => import("@/components/PartnerCTA"))
+const PartnerCTA = dynamic(() => import("@/components/cta/PartnerCTA"))
 const GridItem = dynamic(() => import("@/components/GridItem"))
 const SectionComp = dynamic(() => import("@/components/page/SectionFlex"))
 const Faq = dynamic(() => import("@/components/page/Faq"))
 const PortfolioCta = dynamic(() => import("@/components/cta/PortfolioCta"))
-const ContactForm = dynamic(() => import("@/components/form/ContactForm"))
+const LetsConnect = dynamic(() => import("@/components/page/LetsConnect"))
 
 const WebDesign: NextPage = () => {
   return (
@@ -118,69 +115,13 @@ const WebDesign: NextPage = () => {
         </div>
       </SectionComp>
       <PortfolioCta />
-      <SectionComp
-        heading="Why design and develop a website?"
-        height={0}
-        id=""
-        image={"/content/google-analytics-chart.svg"}
-        position={"right"}
-        subHeading="Increase your online presence."
-        width={0}
-      >
-        <p className="mt-4 space-y-6 text-slate-700  text-[16px]">
-          With thoughtful planning and consideration, we&apos;ll create a site
-          that will successfully produce incredible results – whether focused on
-          sales, leads or engagement with customers.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-6 gap-4">
-          {WEB_DESIGN_BENEFITS.map(item => (
-            <GridItem key={item.name} {...item} />
-          ))}
-        </div>
-      </SectionComp>
-      <SectionComp
-        heading={"Web Design Process"}
-        height={0}
-        id={"web-design-process"}
-        image={"/content/badge-desktop-wire-frame.svg"}
-        position={"left"}
-        subHeading={"Easy web design process."}
-        width={0}
-      >
-        <p className="mt-4 space-y-6 text-slate-700  text-[16px]">
-          Let Buchanan Computer&apos;s expertise guide your web design project
-          to create an engaging website that will lead to increased conversions.
-          We build each website from scratch which allows us to design with
-          intent for each brand and portray their message how they see fit.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-6 gap-4">
-          {WEB_DESIGN_PROCESS.map(item => (
-            <GridItem key={item.name} {...item} />
-          ))}
-        </div>
-      </SectionComp>
+      <LetsConnect />
       <Faq
         heading={"Frequently asked Web Design questions"}
         id={"web-faq"}
         subHeading={"Everything you need to know"}
         type="web"
       />
-      <Section id={"web-design-contact"}>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-14 gap-y-16 lg:max-w-5xl lg:px-8 xl:max-w-none xl:grid-cols-12 xl:px-0">
-          <div className="lg:col-span-5">
-            <Heading
-              description={
-                "We value our client relationship and your success as much as our own. We take the time to research and understand your business. We use our expertise to create engaging experiences for your customers that not only looks good but also drive audiences to action, helping you reach and exceed your business goals."
-              }
-              heading={"Get In Touch"}
-              subHeading={"Your success is our success."}
-            />
-          </div>
-          <div className="-mb-4 lg:col-span-8 xl:col-span-7 xl:col-start-6">
-            <ContactForm />
-          </div>
-        </div>
-      </Section>
     </>
   )
 }

@@ -18,7 +18,7 @@ type Props = {
   image?: NextImageSrc
   width?: number
   height?: number
-  position: "left" | "right"
+  position: "left" | "right" | "center"
 }
 
 const SectionComp: FC<Props> = ({

@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
 import { FC } from "react"
@@ -12,6 +13,8 @@ type Props = {
   url: string
   href: string
 }
+
+const LetsConnect = dynamic(() => import("@/components/page/LetsConnect"))
 
 const ShowcaseItem: FC<Props> = ({
   name,
@@ -88,13 +91,13 @@ const Showcase: FC<ShowcaseProps> = () => {
         <h1 className="text-sm leading-6 font-semibold text-sky-500">
           Showcase
         </h1>
-        <p className="mt-6 text-[2.5rem] leading-none sm:text-6xl tracking-tight font-bold text-slate-900 dark:text-white">
-          We make a lot of websites. Check out some of our favorites.
+        <p className="text-4xl font-extrabold tracking-tight text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
+          Checkout some of our favorite websites we&apos;ve built.
         </p>
         <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
           You&apos;re company deserves a <em>professional website</em>. Starting
           at <em>$3,000 - $4,000</em> we&apos;d be happy to get things moving
-          forward. .
+          forward...
         </p>
       </div>
       <ul className="grid max-w-[26rem] sm:max-w-[52.5rem] mt-16 sm:mt-20 md:mt-32 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto gap-6 lg:gap-y-8 xl:gap-x-8 lg:max-w-7xl px-4 sm:px-6 lg:px-8 mb-20">
@@ -110,6 +113,7 @@ const Showcase: FC<ShowcaseProps> = () => {
           />
         ))}
       </ul>
+      <LetsConnect />
     </main>
   )
 }

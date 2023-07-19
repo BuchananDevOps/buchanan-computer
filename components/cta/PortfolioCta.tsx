@@ -1,9 +1,10 @@
 import Image from "next/image"
 import { FC } from "react"
 
-import AcresHero from "@/public/portfolio/hero/7acres-wd-hero.webp"
-import CsaGroupHero from "@/public/portfolio/hero/csagroup-wd-hero.webp"
-import RailWorksHero from "@/public/portfolio/hero/railworks-wd-hero.webp"
+import AcresCta from "@/public/portfolio/hero/7acres-cta.webp"
+import JpCta from "@/public/portfolio/hero/jp-cxp-cta.webp"
+import PierreCta from "@/public/portfolio/hero/pierre-cta.webp"
+import WhislCta from "@/public/portfolio/hero/whisl-cta.webp"
 
 import GradientSectionBorder from "../GradientSectionBorder"
 import Heading from "../page/Heading"
@@ -12,8 +13,8 @@ const PortfolioCta: FC = () => {
   return (
     <GradientSectionBorder>
       <div className="relative -mt-[5.75rem] overflow-x-scroll overflow-y-hidden lg:overflow-hidden  py-12 md:py-[5.75rem]">
-        <div className="mx-auto max-w-container px-4 pt-4 sm:px-6 lg:flex lg:px-8">
-          <div className="relative z-20 mx-auto pb-16 pt-16 lg:mx-0 lg:w-[20rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20">
+        <div className="mx-auto max-w-container px-4 pt-4 sm:px-6 lg:flex lg:px-8 items-center">
+          <div className="relative z-20 mx-auto pb-16 pt-16 lg:mx-0 lg:w-[26rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20">
             <Heading
               isDark
               button={{
@@ -30,9 +31,9 @@ const PortfolioCta: FC = () => {
               <div className="relative flex-shrink-0 p-4">
                 <div className="relative z-10 rounded shadow-xl ring-1 ring-slate-200/5">
                   <Image
-                    alt={"Web Design Hero Buchanan Computer Hero Item"}
+                    alt={"Web Design Portfolio Buchanan Computer Item"}
                     className="h-[404px] w-[336px]"
-                    src={RailWorksHero}
+                    src={JpCta}
                   />
                 </div>
                 <div className="z-0">
@@ -45,9 +46,9 @@ const PortfolioCta: FC = () => {
               <div className="relative mt-14 flex-shrink-0 p-4">
                 <div className=" rounded shadow-xl ring-1 ring-slate-900/5">
                   <Image
-                    alt={"Web Design Hero Buchanan Computer Hero Item"}
+                    alt={"Web Design Portfolio Buchanan Computer Item"}
                     className="h-[404px] w-[336px]"
-                    src={CsaGroupHero}
+                    src={WhislCta}
                   />
                 </div>
                 <div>
@@ -65,9 +66,9 @@ const PortfolioCta: FC = () => {
               <div className="relative flex-shrink-0 p-4">
                 <div className=" rounded shadow-xl ring-1 ring-slate-900/5">
                   <Image
-                    alt={"Web Design Hero Buchanan Computer Hero Item"}
+                    alt={"Web Design Portfolio Buchanan Computer Item"}
                     className="h-[404px] w-[336px]"
-                    src={AcresHero}
+                    src={AcresCta}
                   />
                 </div>
                 <div>
@@ -77,9 +78,9 @@ const PortfolioCta: FC = () => {
               <div className="relative mt-14 flex-shrink-0 p-4">
                 <div className=" rounded shadow-xl ring-1 ring-slate-900/5">
                   <Image
-                    alt={"Web Design Hero Buchanan Computer Hero Item"}
+                    alt={"Web Design Portfolio Buchanan Computer Item"}
                     className="h-[404px] w-[336px]"
-                    src={CsaGroupHero}
+                    src={PierreCta}
                   />
                 </div>
                 <div>

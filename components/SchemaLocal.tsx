@@ -1,8 +1,8 @@
 import React, { FC } from "react"
 
-import { SnapDown } from "./SnapDown"
-import { SnapLeft } from "./SnapLeft"
-import { SnapUp } from "./SnapUp"
+import { SnapDown } from "@/components/motion/SnapDown"
+import { SnapLeft } from "@/components/motion/SnapLeft"
+import { SnapUp } from "@/components/motion/SnapUp"
 
 const SchemaLocal: FC = () => {
   return (

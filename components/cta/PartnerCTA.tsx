@@ -3,7 +3,7 @@ import { FC } from "react"
 
 import { HOME_BADGES, SEO_BADGES, WEB_BADGES } from "@/lib/badges"
 
-import Section from "./page/Section"
+import Section from "../page/Section"
 
 type Props = {
   heading?: string
@@ -34,7 +34,7 @@ const PartnerCTA: FC<Props> = ({ page, heading }) => {
               <Image
                 key={badge.name}
                 alt={badge.name}
-                className="client-cta_badge z-10 my-2 h-36 w-auto mx-6 "
+                className="client-cta_badge z-10 my-2 h-24 md:h-28 lg:h-36 w-auto mx-6 "
                 src={badge.image}
               />
             ))}

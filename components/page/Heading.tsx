@@ -24,9 +24,9 @@ const Heading: FC<Props> = ({
   return (
     <div className="">
       <h2
-        className={clsx("text-base font-semibold leading-7 text-sky-500", {
+        className={clsx("text-base font-semibold leading-7", {
           "text-sky-500": isDark === false,
-          "text-white": isDark === true,
+          "text-green-400": isDark === true,
         })}
       >
         {heading}
@@ -36,7 +36,7 @@ const Heading: FC<Props> = ({
           "mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black sm:text-5xl sm:leading-[3.5rem]",
           {
             "text-slate-900": isDark == false,
-            "text-slate-200": isDark === true,
+            "text-white": isDark === true,
           }
         )}
       >
@@ -44,9 +44,9 @@ const Heading: FC<Props> = ({
       </p>
       {description ? (
         <p
-          className={clsx("mt-4 space-y-6  font-light text-[15px]", {
-            "text-slate-700": isDark === false,
-            "text-slate-200": isDark === true,
+          className={clsx("mt-4 space-y-6", {
+            "text-slate-700 font-light text-[15px]": isDark === false,
+            "text-slate-400 font-normal": isDark === true,
           })}
         >
           {description}
