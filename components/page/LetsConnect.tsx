@@ -16,11 +16,9 @@ const LetsConnect: FC = () => {
             </h1>
             <div className="prose max-w-none px-4">
               <p>
-                We value our client relationship and your success as much as our
-                own. We take the time to research and understand your business.
-                We use our expertise to create engaging experiences for your
-                customers that not only looks good but also drive audiences to
-                action, helping you reach and exceed your business goals.
+                Discover how you can add power to your business with a modern
+                website, structured data integration, built-in high performing
+                seo, analyze real-time data, and more.
               </p>
               <p />
               <table>

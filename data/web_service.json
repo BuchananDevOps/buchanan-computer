@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Buchanan Computer",
+    "location": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8 Osprey Lane",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      }
+    }
+  },
+  "name": "Web Design",
+  "brand": "Buchanan Compouter",
+  "employee": "John Buchanan",
+  "foundingDate": "2011-08-05",
+  "description": "The best web design is crafted with experience. Visually-stunning, high performance websites, built with React, Next.js and TailwindCSS.",
+  "keywords": "web, website, buchanan, computer, design, designed, designer, company, development, develop, professional, experienced, best, create,  ",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su",
+  "telephone": "+13024648832",
+  "email": "buchanancomp@gmail.com",
+  "naics": "541430",
+  "image": "https://buchanancomputer.com/twitter-card.png",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Cryptocurrency",
+  "priceRange": "$$$$$",
+
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.44238,
+      "longitude": -75.64644
+    },
+
+    "geoRadius": "5000 mi"
+  }
+}

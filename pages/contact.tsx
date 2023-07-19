@@ -19,9 +19,8 @@ const Contact: FC = () => {
               <div className="prose max-w-none px-4">
                 <p>
                   Discover how you can add power to your business with a modern
-                  website, structured data schema integrations, build-in high
-                  performance best practices, analyze real-time user
-                  interactions, and more.
+                  website, structured data integration, built-in high performing
+                  seo, analyze real-time data, and more.
                 </p>
                 <p>
                   Submit the form with your question or call{" "}

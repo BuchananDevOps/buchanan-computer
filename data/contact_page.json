@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "SEO",
+  "@type": "ContactPage",
+  "name": "Contact",
   "brand": "Buchanan Compouter",
   "employee": "John Buchanan",
   "foundingDate": "2011-08-05",

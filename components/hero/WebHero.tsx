@@ -13,10 +13,10 @@ const WebHero: FC = () => {
       <div className="mx-auto max-w-container px-4 pt-4 sm:px-6 lg:flex lg:px-8">
         <div className="relative z-20 mx-auto max-w-[40rem] pb-16 pt-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20">
           <h1 className="text-base font-semibold leading-7 text-sky-500">
-            Web Design Services
+            Web Design
           </h1>
           <p className="mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black sm:text-5xl sm:leading-[3.5rem]">
-            Modern website designer, crafted with experience.
+            The best web design is crafted with experience.
           </p>
           <div className="flex flex-wrap mt-4">
             <div className="flex items-center text-sm font-medium ">
@@ -86,7 +86,7 @@ const WebHero: FC = () => {
             </div>
           </div>
           <p className="mt-4 text-base leading-7 text-slate-600">
-            Visually-stunning, high performance websites built with React,
+            Visually-stunning, high performance websites, built with React,
             Next.js and TailwindCSS. The perfect combination for your next
             project and the ultimate resource for building your businesses
             website with Buchanan Computer.
