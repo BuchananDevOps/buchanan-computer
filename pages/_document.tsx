@@ -5,8 +5,11 @@ import NextDocument, {
   Main,
   NextScript,
 } from "next/document"
+import Script from "next/script"
 
 import clsx from "clsx"
+
+import { gtagUrl, renderSnippet } from "@/lib/analytics"
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -18,9 +21,14 @@ export default class Document extends NextDocument {
     return (
       <Html
         lang="en"
+        itemType="http://schema.org/WebPage"
         className=" [--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem]"
       >
         <Head>
+          <Script async src={gtagUrl} />
+          <Script
+            dangerouslySetInnerHTML={{ __html: renderSnippet() as string }}
+          />
           <link
             rel="apple-touch-icon"
             sizes="180x180"

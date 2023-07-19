@@ -2,16 +2,23 @@ import type { AppProps } from "next/app"
 import dynamic from "next/dynamic"
 import { FC } from "react"
 
+import { useAnalytics } from "@/lib/analytics"
+
 import "../css/fonts.css"
 import "../css/main.css"
 
+const Head = dynamic(() => import("@/data/head/Head"))
 const Page = dynamic(() => import("@/components/page/Page"))
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
+  useAnalytics()
   return (
-    <Page>
-      <Component {...pageProps} />
-    </Page>
+    <>
+      <Head />
+      <Page>
+        <Component {...pageProps} />
+      </Page>
+    </>
   )
 }
 
