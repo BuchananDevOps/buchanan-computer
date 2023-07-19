@@ -2,13 +2,7 @@ import { NextPage } from "next"
 import dynamic from "next/dynamic"
 import Head from "next/head"
 
-import WebDesignDark from "@/components/icons/WebDesignDark"
-import SectionVertical from "@/components/page/SectionVertical"
-import IntroSeo from "@/components/section/IntroSeo"
-import IntroWebDesign from "@/components/section/IntroWebDesign"
-import IntroHero from "@/components/hero/IntroHero"
-
-const HomeHero = dynamic(() => import("@/components/hero/HomeHero"))
+const IntroHero = dynamic(() => import("@/components/hero/IntroHero"))
 const PartnerCTA = dynamic(() => import("@/components/cta/PartnerCTA"))
 const BestPractices = dynamic(() => import("@/components/cta/BestPractices"))
 
