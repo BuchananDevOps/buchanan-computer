@@ -13,15 +13,15 @@ import seoFaq from "../seoFaq.json"
 import webFaq from "../webFaq.json"
 import SEO from "./Seo"
 
-function getType() {
+function getSchema() {
   const pathname = useRouter().pathname
   switch (pathname) {
     case "/":
       return { local_business }
     case "/seo":
-      return { seo_service }
+      return { seo_service, seoFaq }
     case "/web-design":
-      return { web_service }
+      return { web_service, webFaq }
     case "/showcase":
       return { creative_work }
     case "/contact":
@@ -31,21 +31,8 @@ function getType() {
   }
 }
 
-function getFaq() {
-  const pathname = useRouter().pathname
-  switch (pathname) {
-    case "/seo":
-      return { seoFaq }
-    case "/web-design":
-      return { webFaq }
-    default:
-      return
-  }
-}
-
 const Head: FC = () => {
-  const type = getType()
-  const faqSchema = getFaq()
+  const schema = getSchema()
   return (
     <SEO>
       <meta
@@ -56,12 +43,7 @@ const Head: FC = () => {
       <script
         key="structured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(type) }}
-      />
-      <script
-        key="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <script async src={gtagUrl} />
       <script dangerouslySetInnerHTML={{ __html: renderSnippet() as string }} />
